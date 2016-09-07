@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- Run self-filter -->
+  <node pkg="drrobot_jaguar_navigation" type="laser_footprint_filter" />
+ 
+  <!--- Run gmapping -->
+  <include file="$(find drrobot_jaguar_navigation)/config/gmapping_jaguar.launch" />
+    <arg name="scan_topic" value=scan_filtered" />
+  </include>
+
+  <!--- Run Move Base and Robot Pose EKF -->
+  <include file="$(find drrobot_jaguar_navigation)/laser/move_base_jaguar_laser.launch" />
+
+</launch>

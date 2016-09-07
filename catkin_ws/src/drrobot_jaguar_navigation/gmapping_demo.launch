@@ -1,0 +1,9 @@
+<launch>
+
+  <!--- Run gmapping -->
+  <include file="$(find drrobot_jaguar_navigation)/config/gmapping_jaguar.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find drrobot_jaguar_navigation)/config/move_base_jaguar.launch" />
+
+</launch>

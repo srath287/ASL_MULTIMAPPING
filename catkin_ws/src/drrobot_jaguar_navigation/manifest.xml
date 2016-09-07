@@ -1,0 +1,17 @@
+<package>
+  <description brief="drrobot_jaguar_navigation">
+
+     jaguar_navigation
+
+  </description>
+  <author>Tully Foote</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/drrobot_jaguar_ros_pkg</url>
+  <depend package="move_base"/>
+  <depend package="gmapping"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+</package>
+
+

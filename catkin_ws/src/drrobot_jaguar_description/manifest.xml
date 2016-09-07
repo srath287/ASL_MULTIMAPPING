@@ -1,0 +1,10 @@
+<package>
+  <description brief="drrobot_jaguar_description">drrobot_jaguar_description</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/drrobot_jaguar_ros_pkg</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+</package>

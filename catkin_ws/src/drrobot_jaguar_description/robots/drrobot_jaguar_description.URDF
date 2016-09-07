@@ -1,0 +1,297 @@
+<robot
+  name="drrobot_jaguar_description">
+  <link
+    name="base_footprint">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001" />
+      <inertia
+        ixx="0.0001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0001"
+        iyz="0.0"
+        izz="0.0001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58431 1" />
+      </material>
+    </visual>
+  </link>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.19049 -0.0046024 0.0060695"
+        rpy="0 0 0" />
+      <mass
+        value="7.2274" />
+      <inertia
+        ixx="0.22086"
+        ixy="0.0015969"
+        ixz="-0.00102"
+        iyy="0.32218"
+        iyz="0.0067711"
+        izz="0.16373" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_footprint_joint"
+    type="fixed">
+    <origin
+      xyz="-0.18415 0 0.16"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+  </joint>
+  <link
+    name="Empty_Linkfl">
+    <inertial>
+      <origin
+        xyz="0.025476 -6.9389E-18 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="9.5179" />
+      <inertia
+        ixx="0.049835"
+        ixy="1.6352E-19"
+        ixz="-8.0961E-19"
+        iyy="0.030937"
+        iyz="-4.3368E-19"
+        izz="0.030937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkfl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkfl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointfl"
+    type="continuous">
+    <origin
+      xyz="-0.084022 0.19986 -0.035256"
+      rpy="1.4054 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Linkfl" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="Empty_Linkrl">
+    <inertial>
+      <origin
+        xyz="0.025024 1.0408E-17 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="9.5179" />
+      <inertia
+        ixx="0.049835"
+        ixy="9.1521E-19"
+        ixz="-1.8522E-18"
+        iyy="0.030908"
+        iyz="1.0842E-18"
+        izz="0.030908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkrl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkrl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointrl"
+    type="continuous">
+    <origin
+      xyz="-0.083399 -0.15123 -0.03515"
+      rpy="1.6208 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Linkrl" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="Empty_Linkfr">
+    <inertial>
+      <origin
+        xyz="0.013767 1.3878E-17 5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="9.5179" />
+      <inertia
+        ixx="0.049835"
+        ixy="-3.5149E-19"
+        ixz="-2.4477E-18"
+        iyy="0.030961"
+        iyz="0"
+        izz="0.030961" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkfr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkfr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointfr"
+    type="continuous">
+    <origin
+      xyz="0.41667 0.19986 -0.035256"
+      rpy="1.3212 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Linkfr" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="Empty_Linkrr">
+    <inertial>
+      <origin
+        xyz="0.014358 -1.3878E-17 8.3267E-17"
+        rpy="0 0 0" />
+      <mass
+        value="9.5179" />
+      <inertia
+        ixx="0.049835"
+        ixy="6.4931E-19"
+        ixz="-3.4671E-18"
+        iyy="0.030921"
+        iyz="3.2526E-19"
+        izz="0.030921" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkrr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drrobot_jaguar_description/meshes/Empty_Linkrr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointrr"
+    type="continuous">
+    <origin
+      xyz="0.41573 -0.15123 -0.03515"
+      rpy="1.5341 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Linkrr" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>

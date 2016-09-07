@@ -1,0 +1,21 @@
+<launch>
+  <group ns="map_save">
+    <node 
+	pkg="hokuyo_node" 
+	name="hokuyo_node" 
+	type="hokuyo_node" 
+	output="screen"/>
+    
+    <node 
+	pkg="rviz" 
+	name="rviz" 
+	type="rviz" 
+	output="screen"/>	
+    
+    <node 
+	pkg="drrobot_jaguar4x4_player"
+	name="drrobot_jaguar4x4_keyboard_teleop_node" 
+	type="drrobot_jaguar4x4_keyboard_teleop_node" 
+	output="screen"/>
+  </group>
+</launch>

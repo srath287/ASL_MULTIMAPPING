@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- Run the map server -->
+  <arg name="map_file" default="$(find drrobot_jaguar_navigation)/maps/AS126.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!--- Run AMCL -->
+  <include file="$(find drrobot_jaguar_navigation)/config/amcl_jaguar.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find drrobot_jaguar_navigation)/config/move_base_jaguar.launch" />
+
+</launch>
